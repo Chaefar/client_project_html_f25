@@ -1,0 +1,141 @@
+.atkinson-hyperlegible-regular {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.atkinson-hyperlegible-bold {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.atkinson-hyperlegible-regular-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.atkinson-hyperlegible-bold-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.skip a{
+    padding: 5px;
+    position: absolute;
+    top: -65px;
+    margin: auto;
+    color:#000000;
+    background-color: white;
+    font-weight: bold;
+}
+.skip a:focus{
+    top: 25px;
+}
+*:focus{
+    border: 3px dashed #17b617;
+}
+
+.logo{
+    height: auto;
+    max-width: 100px;
+}
+.what{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00274C;
+}
+nav ul li a {
+    color: #FFCB05;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.active{
+	background-color: #ffffff;
+    text-transform: uppercase;
+}
+nav.active ul li a{
+    color: #000000;
+}
+header, main, footer{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 1.25em;
+    line-height: 1.6;
+}
+main a:link, footer a:link {
+    color: #00B2A9;
+}
+header{
+    background-color: #00274C;
+}
+section{
+    margin: 5%;
+    color:#00274C;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.relative{
+    position: relative;
+}
+.relative img{
+    opacity: 50%;
+}
+h1.absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* aligns text with position and transform: https://www.w3schools.com/css/css_align.asp */
+    font-size: 7vw;
+    text-align: center;
+    color: #FFCB05;
+}
+h2{
+    margin: 0%;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #FFCB05;
+}
+.nettip > div, .nettip > ol{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    border: 1px solid #00274C;
+}
+footer{
+    padding: 10px;
+    background-color: #00274C;
+    color: #ffffff;
+}
+.netsrc-container{
+    display: grid;
+    grid-template-columns: f1 f1 f1;
+    column-gap: 2%;
+}
+.netsrc-prof{
+    grid-column: 1/span -1;
+}
+.netsrc-datasci, .netsrc-ux, .netsrc-libarch{
+    grid-row:2/3;
+    border: 1px solid #00274C;
+}
+.netsrc-datasci{
+    grid-column: 1/2;
+}
+.netsrc-ux{
+    grid-column: 2/3;
+}
+.netsrc-libarch{
+    grid-column: 3/4;
+}

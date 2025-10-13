@@ -3,41 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Resumes</title>
 </head>
 <body>
 
     <header>
-      <a href = "#main" class = "skip">Skip to Main Content</a>
-      <img src = "images/UMSI_signature_vertical_informal_solidblue.jpg" alt = "UMSI Logo">
+      <div class="skip"><a href="#main">Skip to Main Content</a></div>
+      <!-- <img class = "logo" src = "images/UMSI_signature_vertical_informal_solidblue.jpg" alt = "UMSI Logo"> -->
         <nav>
-            <ul>
+            <ul class = "what">
+                <li><img class = "logo" src = "images/UMSI_signature_vertical_informal_solidblue.jpg" alt = "UMSI Logo"></li>
                 <li><a href = "index.html">Home</a></li>
-                <li><a href = "resume.html">Resumes</a></li>
+                <li class = "active"><a href = "resume.html">Resumes</a></li>
                 <li><a href = "network.html">Networking & Connections</a></li>
                 <li><a href = "careerexplore.html">Career Exploration</a></li>
             </ul>
         </nav>
-        <img src = "images/UMSI_MastersOrientation_081825_15.jpg" alt = "Page Banner">
-        <h1>Resume Support</h1>
+        <div class = "relative">
+          <img src = "images/UMSI_MastersOrientation_081825_15.jpg" alt = "Page Banner">
+          <h1 class = "absolute">Resume Support</h1>
+        </div>
 
     </header>
 <main id="main">
 
   <section>
     <h2>Craft a Resume that Tells Your Story</h2>
-    <p>
+    <div>
+      <p>
       Your resume is often your first impression—an opportunity to highlight your unique strengths, skills, and experiences to potential employers. Whether you’re starting from scratch or looking to polish an existing resume, these resources are here to help you every step of the way.
-    </p>
-    <p>
+      </p>
+      <p>
       UMSI students are in high demand, and a clear, well-organized resume will help you stand out among applicants. On this page, you'll find practical tips, templates, and guides—all tailored to the needs of School of Information students and aligned with employer expectations.
-    </p>
-    <p>
+      </p>
+      <p>
       Need feedback? You can always <a href="https://umich.instructure.com/courses/137916/pages/talk-to-a-career-coach" target="_blank">meet with a CDO Career Coach</a> to review your materials.
-    </p>
+      </p>
+    </div>
   </section>
 
-  <section>
+  <section class = "nettip">
     <h2>Resume Writing Made Easy: Steps to Success</h2>
     <ol>
       <li><strong>Download a UMSI-Approved Template:</strong> Start with a format that works—no need to design from scratch.</li>
@@ -103,7 +113,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class = "nettip">
     <h2>Resume Checklist</h2>
         <p>Below is a checklist of what your resume should include</p>
           <ol>
