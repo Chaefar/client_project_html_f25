@@ -43,6 +43,7 @@
 .logo{
     height: auto;
     max-width: 100px;
+    align-self: stretch;
 }
 
 .what{
@@ -50,6 +51,7 @@
     flex-wrap: wrap;
     align-items: center;
     height: auto;
+    justify-content: space-around;
 }
 
 nav ul {
@@ -129,7 +131,11 @@ h2{
     background-color: #FFCB05;
 }
 
-.nettip > div, .nettip > ol{
+ul, ol{
+    margin-left: 25px;
+}
+
+.nettip > div{
     margin-top: 5%;
     margin-bottom: 5%;
     padding: 5%;
@@ -148,6 +154,15 @@ footer{
     column-gap: 2%;
 }
 
+.netsrc-container img{
+    display: block;
+    max-width: 75%;
+    height: auto;
+    margin: auto;
+}
+.netsrc-alumni, .netsrc-fairs{
+    grid-column: 1/-1;
+}
 .netsrc-prof{
     grid-column: 1/span -1;
 }
@@ -171,31 +186,34 @@ footer{
 
 .careersrc-container{
     display: grid;
-    grid-template-columns: f1 f1 f1;
+    grid-template-columns: f1 f1 f1 f1;
 }
-.careersrc-container div{
-    font-size: 0.75em;
+.careersrc-container div ul{
+    font-size: 1em;
 }
 .careersrc-top{
-    grid-column: 1/span 3;
+    grid-column: 1/span 5;
     grid-row: 1/ span 1;
+    margin-bottom: 5%;
 }
 .careersrc-data{
-    grid-column: 2/span 2;
+    grid-column: 3/span 2;
     grid-row: 2/span 1
 }
 .careersrc-ux{
     grid-column: 1/span 2;
+    grid-row: 3/span 1;
 }
 .careersrc-lib{
-    grid-column: 2/span 2;
-
+    grid-column: 3/span 2;
+    grid-row: 4/span 1;
 }
 .careersrc-product{
     grid-column: 1/span 2;
+    grid-row: 5/span 1;
 
 }
 .careersrc-healthinfo{
-    grid-column: 2/span 2;
-
+    grid-column: 3/span 2;
+    grid-row: 6/span 1;
 }
