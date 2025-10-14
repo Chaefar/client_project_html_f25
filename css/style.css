@@ -82,13 +82,13 @@ nav.active ul li a{
 }
 
 body{
-    background-color: #f1f1f1;
+    background-color: #dcdcdc;
 }
 
 header, main, footer{
     font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 1.25em;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 header{
@@ -144,12 +144,9 @@ footer{
     color: #ffffff;
 }
 
-.header-box{
-    border: 10px solid #f1f1f1;
-}
-.main-box{
+/* .main-box{
     border: 10px solid #00274C;
-}
+} */
 
 .box{
     margin-top: 5%;
@@ -159,22 +156,23 @@ footer{
     box-shadow: 3px 3px #00274C;
     background-color: #ffffff;
 }
-.box1{
-    margin-top: 5%;
-    padding: 5%;
-    border: 1px solid #00274C;
-    border-radius: 1%;
-    box-shadow: 3px 3px #FFCB05;
-    background-color: #ffffff;
-}
 
 .box ul, .box ol{
     margin-left:5%;
 }
 
 .box img{
+    border: 2px solid #00274C;
+    border-radius: 1%;
+}
+
+.box1{
+    margin-top: 5%;
+    padding: 5%;
     border: 1px solid #00274C;
     border-radius: 1%;
+    /* box-shadow: 1px 1px #CFC096; */
+    background-color: #f1f1f1;
 }
 
 .video-size{
