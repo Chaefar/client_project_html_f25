@@ -42,22 +42,22 @@
 
 .logo{
     height: auto;
-    max-width: 100px;
+    max-width: 70px;
 }
 
 .navmenu{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: auto;
-    /* justify-content: space-around; */
 }
+
 nav .navlogo{
     float:left;
 }
+
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     overflow: hidden;
     background-color: #00274C;
@@ -80,32 +80,23 @@ nav ul li a {
 nav.active ul li a{
     color: #000000;
 }
+
+body{
+    background-color: #f1f1f1;
+}
+
 header, main, footer{
     font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 1.25em;
     line-height: 1.6;
 }
 
-main a:link, footer a:link {
-    color: #00B2A9;
-}
-
 header{
     background-color: #00274C;
 }
 
-section{
-    margin: 5%;
-    color:#00274C;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.video-size{
-    width: 100%;
+footer a:link {
+    color: #00B2A9;
 }
 
 .relative{
@@ -127,97 +118,125 @@ h1.absolute{
     line-height: 1;
 }
 
+section{
+    margin: 5%;
+    color:#00274C;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 h2{
     margin: 0%;
     font-size: 1.40em;
     text-align: center;
     background-color: #FFCB05;
-}
-
-ul, ol{
-    margin-left: 25px;
-}
-
-.nettip > div{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding: 5%;
-    border: 1px solid #00274C;
-    border-radius: 5%;
+    box-shadow: 4px 4px #00274C;
+    grid-column: 1/-1;
 }
 
 footer{
-    padding: 10px;
+    padding: 5px;
     background-color: #00274C;
     color: #ffffff;
 }
 
-.netsrc-container{
-    display: grid;
-    grid-template-columns: f1 f1 f1;
-    column-gap: 2%;
+.header-box{
+    border: 10px solid #f1f1f1;
+}
+.main-box{
+    border: 10px solid #00274C;
 }
 
-.netsrc-container img{
-    display: block;
-    max-width: 75%;
-    height: auto;
-    margin: auto;
+.box{
+    margin-top: 5%;
+    padding: 5%;
+    border: 1px solid #00274C;
+    border-radius: 1%;
+    box-shadow: 3px 3px #00274C;
+    background-color: #ffffff;
 }
-.netsrc-alumni, .netsrc-fairs{
+.box1{
+    margin-top: 5%;
+    padding: 5%;
+    border: 1px solid #00274C;
+    border-radius: 1%;
+    box-shadow: 3px 3px #FFCB05;
+    background-color: #ffffff;
+}
+
+.box ul, .box ol{
+    margin-left:5%;
+}
+
+.box img{
+    border: 1px solid #00274C;
+    border-radius: 1%;
+}
+
+.video-size{
+    width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.home-hub, .home-why, .home-start, .home-connect, .resume-craft, .resume-write, .resume-src, .resume-faq, .resume-check, .net-why, .net-tips, .net-src, .career-start, .career-choose, .career-src{
     grid-column: 1/-1;
 }
+
 .netsrc-prof{
-    grid-column: 1/span -1;
+    grid-column: 1/-1;
 }
 
-.netsrc-datasci, .netsrc-ux, .netsrc-libarch{
-    grid-row:2/3;
-    border: 1px solid #00274C;
+.netsrc-data, .netsrc-libarch{
+    grid-column: 1/span 3;
 }
 
-.netsrc-datasci{
-    grid-column: 1/2;
+.netsrc-data{
+    grid-row: 2/span 1;
 }
 
 .netsrc-ux{
-    grid-column: 2/3;
+    grid-column: 2/span 3;
+    grid-row: 3/span 1;
 }
 
 .netsrc-libarch{
-    grid-column: 3/4;
+    grid-row: 4/span 1;
 }
 
-.career-container{
-    display: grid;
-    grid-template-columns: f1 f1 f1 f1;
-}
-.careersrc-container div ul{
-    font-size: 1em;
-}
 .careersrc-top{
-    grid-column: 1/span 5;
+    grid-column: 1/-1;
     grid-row: 1/ span 1;
     margin-bottom: 5%;
 }
+.careersrc-data, .careersrc-lib, .careersrc-healthinfo{
+    grid-column: 1/span 3;
+}
+.careersrc-ux, .careersrc-product{
+    grid-column: 2/span 3;
+    /* text-align: right; */
+}
 .careersrc-data{
-    grid-column: 3/span 2;
-    grid-row: 2/span 1
+    grid-row: 2/span 1;
 }
 .careersrc-ux{
-    grid-column: 1/span 2;
     grid-row: 3/span 1;
 }
 .careersrc-lib{
-    grid-column: 3/span 2;
+    grid-column: 1/span 3;
     grid-row: 4/span 1;
 }
 .careersrc-product{
-    grid-column: 1/span 2;
+    grid-column: 2/span 3;
     grid-row: 5/span 1;
 
 }
 .careersrc-healthinfo{
-    grid-column: 3/span 2;
     grid-row: 6/span 1;
 }
