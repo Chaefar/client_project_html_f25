@@ -40,13 +40,18 @@
     border: 3px dashed #17b617;
 }
 
+*:visited{
+    color:#00B2A9;
+}
+
 .logo{
     height: auto;
     max-width: 70px;
 }
-
+/* May want to change navigation to grid */
 .navmenu{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -81,6 +86,19 @@ nav.active ul li a{
     color: #000000;
 }
 
+.nav1{
+    grid-column: 1/2;
+}
+.nav2{
+    grid-column: 2/3;
+}
+.nav3{
+    grid-column: 3/4;
+}
+.nav4{
+    grid-column: 4/5;
+}
+
 body{
     background-color: #dcdcdc;
 }
@@ -93,6 +111,10 @@ header, main, footer{
 
 header{
     background-color: #00274C;
+}
+
+footer{
+    height:5%;
 }
 
 footer a:link {
@@ -175,6 +197,14 @@ footer{
     background-color: #f1f1f1;
 }
 
+.error{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    color: #00274C;
+    box-shadow: 3px 3px #FFCB05;
+}
+
 .video-size{
     width: 100%;
 }
@@ -237,4 +267,13 @@ footer{
 }
 .careersrc-healthinfo{
     grid-row: 6/span 1;
+}
+
+@media screen and (min-width: 800px) {
+    .home-hub, .home-start{
+
+    }
+    .home-why, .home-connect{
+
+    }
 }
