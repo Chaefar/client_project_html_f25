@@ -90,16 +90,50 @@
       </p>
     </div>
     </section>
+    <section class = "form">
+      <div class = "box">
+        <h2>Give Use Feedback!</h2>
+        <form action="https://formspree.io/f/movpegny" method="POST">
+        <fieldset>
+        <legend>Feedback Form</legend>
+          <label for="first_name">Your Name</label>
+          <input type="text" id="first_name" name="first_name" placeholder="Enter Your Name">
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email">
+
+          <label for="date">Date*</label>
+          <input type="date" id="date" name="date" required>
+
+
+          <label for="message">Leave Feedback*</label>
+
+          <textarea id="message" name="message" required></textarea>
+
+          <label for="submit">Submit</label>
+          <input type="submit" id="submit" name="submit" value="submit"></input>
+      </div>
+    </section>
 
         <!-- Content taken & modified from UMGPT with the prompt, "Write me a webpage of intro content to help meet the following requirements - this is for the home page": and then pasted in the client objectives & project requirements"
         UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
     </main>
-
+<!-- Add Career center email and phone number to footer  -->
     <footer>
-        <p>University of Michigan School of Information | @ Copyright <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p>University of Michigan School of Information @ Copyright <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
     </footer>
 </body>
 <script>
+  function myFunction() {
+  const menu = document.getElementById("navmenu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+
+
   document.getElementById('year').innerHTML = new Date().getFullYear();
   console.log("did year show up?")
 </script>

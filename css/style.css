@@ -41,19 +41,35 @@
 }
 
 *:visited{
-    color:#00B2A9;
+    color:#75988d;
+}
+
+.navmenu{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    justify-content: left;
+    padding: 2%;
+}
+
+.nav1{
+    grid-column: 1/2;
+}
+
+.nav2{
+    grid-column: 2/3;
+}
+
+.nav3{
+    grid-column: 3/4;
+}
+
+.nav4{
+    grid-column: 4/5;
 }
 
 .logo{
     height: auto;
     max-width: 70px;
-}
-/* May want to change navigation to grid */
-.navmenu{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 nav .navlogo{
@@ -84,19 +100,6 @@ nav ul li a {
 
 nav.active ul li a{
     color: #000000;
-}
-
-.nav1{
-    grid-column: 1/2;
-}
-.nav2{
-    grid-column: 2/3;
-}
-.nav3{
-    grid-column: 3/4;
-}
-.nav4{
-    grid-column: 4/5;
 }
 
 body{
@@ -146,7 +149,7 @@ section{
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -211,9 +214,9 @@ footer{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
 }
-.home-hub, .home-why, .home-start, .home-connect, .resume-craft, .resume-write, .resume-src, .resume-faq, .resume-check, .net-why, .net-tips, .net-src, .career-start, .career-choose, .career-src{
+.home-hub, .home-why, .home-start, .home-connect, .form, .resume-craft, .resume-write, .resume-src, .resume-faq, .resume-check, .net-why, .net-tips, .net-src, .career-start, .career-choose, .career-src{
     grid-column: 1/-1;
 }
 
@@ -269,11 +272,75 @@ footer{
     grid-row: 6/span 1;
 }
 
-@media screen and (min-width: 800px) {
-    .home-hub, .home-start{
+fieldset{
+    margin: 3%;
+}
 
+legend{
+    font-weight: bold;
+}
+
+label{
+  display: block;
+  clear: left;
+}
+
+input, textarea{
+  display: inline-block;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 200px;
+  border-radius: 4px;
+  /* transition:all 1s ease; */
+}
+
+textarea{
+    width: 100%;
+    height: auto;
+}
+
+input [type=submit]{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+@media screen and (min-width: 950px){
+    .navmenu{
+        display: grid;
+        flex-direction: row;
     }
-    .home-why, .home-connect{
-
+    .container{
+        grid-template-columns: repeat(12, 1fr);
+    }
+    section{
+        margin-top: 5%;
+        padding: 5%;
+        border: 1px solid #00274C;
+        border-radius: 1%;
+        box-shadow: 1px 1px #75988d;
+        background-color: #f1f1f1;
+    }
+    .home-hub, .home-start, .resume-write, .resume-faq{
+        grid-column: 1/6;
+    }
+    .home-start{
+        grid-row:2/3;
+    }
+    .home-why, .home-connect, .resume-src, .resume-check{
+        grid-column: 6/span 6;
+    }
+    .home-connect{
+        grid-row:2/3;
+    }
+    .net-alumni{
+        grid-column:2/4;
+    }
+    .net-careerfair{
+        grid-column:4/6;
+    }
+    .net-prof{
+        grid-column: 8/9;
     }
 }
