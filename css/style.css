@@ -46,7 +46,6 @@
 
 .navmenu{
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     justify-content: left;
     padding: 2%;
 }
@@ -103,7 +102,7 @@ nav.active ul li a{
 }
 
 body{
-    background-color: #dcdcdc;
+    background-color: #cacaca;
 }
 
 header, main, footer{
@@ -117,7 +116,7 @@ header{
 }
 
 footer{
-    height:5%;
+    min-height: 50px;
 }
 
 footer a:link {
@@ -169,43 +168,36 @@ footer{
     color: #ffffff;
 }
 
-/* .main-box{
-    border: 10px solid #00274C;
-} */
-
 .box{
-    margin-top: 5%;
+    margin-top: 3%;
     padding: 5%;
     border: 1px solid #00274C;
-    border-radius: 1%;
     box-shadow: 3px 3px #00274C;
     background-color: #ffffff;
 }
 
 .box ul, .box ol{
     margin-left:5%;
+    padding: 5%;
 }
 
 .box img{
     border: 2px solid #00274C;
-    border-radius: 1%;
+    box-shadow: 1px 1px #FFCB05;
 }
 
 .box1{
-    margin-top: 5%;
-    padding: 5%;
+    margin-top: 3%;
+    padding: 3%;
     border: 1px solid #00274C;
-    border-radius: 1%;
-    /* box-shadow: 1px 1px #CFC096; */
+    box-shadow: 1px 1px #FFCB05;
     background-color: #f1f1f1;
 }
 
-.error{
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    color: #00274C;
-    box-shadow: 3px 3px #FFCB05;
+box2{
+    margin-top: 5%;
+    padding: 3%;
+    border: 1px solid #00274C;
 }
 
 .video-size{
@@ -219,8 +211,15 @@ footer{
 .home-hub, .home-why, .home-start, .home-connect, .form, .resume-craft, .resume-write, .resume-src, .resume-faq, .resume-check, .net-why, .net-tips, .net-src, .career-start, .career-choose, .career-src{
     grid-column: 1/-1;
 }
+.net-tips div{
+    grid-column: 1/-1;
+}
+.net-prof{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
 
-.netsrc-prof{
+.prof-para{
     grid-column: 1/-1;
 }
 
@@ -246,28 +245,33 @@ footer{
     grid-row: 1/ span 1;
     margin-bottom: 5%;
 }
+
 .careersrc-data, .careersrc-lib, .careersrc-healthinfo{
     grid-column: 1/span 3;
 }
+
 .careersrc-ux, .careersrc-product{
     grid-column: 2/span 3;
-    /* text-align: right; */
 }
+
 .careersrc-data{
     grid-row: 2/span 1;
 }
+
 .careersrc-ux{
     grid-row: 3/span 1;
 }
+
 .careersrc-lib{
     grid-column: 1/span 3;
     grid-row: 4/span 1;
 }
+
 .careersrc-product{
     grid-column: 2/span 3;
     grid-row: 5/span 1;
-
 }
+
 .careersrc-healthinfo{
     grid-row: 6/span 1;
 }
@@ -283,16 +287,16 @@ legend{
 label{
   display: block;
   clear: left;
+  margin-top: 15px;
 }
 
 input, textarea{
   display: inline-block;
   margin-left: 10px;
-  border: 1px solid #ccc;
-  height: 30px;
+  border: 2px solid #989C97;
+  height: 50px;
   width: 200px;
-  border-radius: 4px;
-  /* transition:all 1s ease; */
+  border-radius: 2px;
 }
 
 textarea{
@@ -302,8 +306,46 @@ textarea{
 
 input [type=submit]{
     display: block;
+}
+
+button, #submit{
+    display: block;
+    margin:auto;
+    width: 50%;
+    background-color: #00274C;
+    color:#FFCB05;
+    font-weight: 700;
+    font-size: large;
+}
+
+#submit{
+    margin-top: 15px;
+}
+
+.error-main{
+    height: 100vh;
+}
+
+.error{
+    text-align: center;
     margin: auto;
     width: 50%;
+    color: #00274C;
+    box-shadow: 3px 3px #FFCB05;
+}
+
+div.error{
+    transform: translate(0%, 5%)
+}
+
+.h1-error{
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.footer-error{
+    position:sticky;
+    bottom:0;
 }
 
 @media screen and (min-width: 950px){
@@ -311,36 +353,54 @@ input [type=submit]{
         display: grid;
         flex-direction: row;
     }
+
     .container{
         grid-template-columns: repeat(12, 1fr);
     }
+
     section{
-        margin-top: 5%;
-        padding: 5%;
-        border: 1px solid #00274C;
-        border-radius: 1%;
-        box-shadow: 1px 1px #75988d;
-        background-color: #f1f1f1;
+        padding: 3%;
+        background-color: #e1e1e1;
+        border: 0.5px solid #00274C;
     }
-    .home-hub, .home-start, .resume-write, .resume-faq{
-        grid-column: 1/6;
+
+    .home-hub{
+        grid-column: 1/-1;
     }
+
+    .home-why, .resume-write, .resume-faq{
+        grid-column: 1/7;
+    }
+
     .home-start{
         grid-row:2/3;
     }
-    .home-why, .home-connect, .resume-src, .resume-check{
-        grid-column: 6/span 6;
+
+    .home-start, .resume-src, .resume-check{
+        grid-column: 7/span 6;
     }
+
     .home-connect{
-        grid-row:2/3;
+        grid-row:3/4;
     }
-    .net-alumni{
-        grid-column:2/4;
+
+    .home-hub, .home-connect, .resume-craft{
+        margin: 2.5vw;
     }
-    .net-careerfair{
-        grid-column:4/6;
+
+    .net-careerfair img, .net-alumni p{
+        grid-column: 3/span 2;
     }
-    .net-prof{
-        grid-column: 8/9;
+
+    .net-careerfair p, .net-alumni img{
+        grid-column: 1/span 3;
+    }
+
+    .careersrc-data, .careersrc-lib, .careersrc-healthinfo{
+    grid-column: 1/span 7;
+    }
+
+    .careersrc-ux, .careersrc-product{
+    grid-column: 5/span 8;
     }
 }

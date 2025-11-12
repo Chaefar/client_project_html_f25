@@ -63,7 +63,6 @@
     <section class="home-start">
     <h2>Start Here</h2>
     <div class = "box">
-        <!-- <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag."> -->
        <h3>Most Popular Resources</h3>
         <ul>
           <li><a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit?tab=t.0" target="_blank">UMSI Resume Guide</a></li>
@@ -89,15 +88,14 @@
         The UMSI Career Development Office (CDO) offers personalized support through appointments, events, and resource guides. <a href="https://umich.instructure.com/courses/137916" target="_blank">Visit the CDO website</a> or <a href="https://www.si.umich.edu/about-umsi/getting-umsi" target="_blank">find us on campus</a> to learn more, schedule a coaching session, or just say hello.
       </p>
     </div>
-    </section>
-    <section class = "form">
-      <div class = "box">
-        <h2>Give Use Feedback!</h2>
+    <div class = "box form">
+        <h3>Give Use Feedback!</h3>
+        <p>Have you used the Career Development Office's services before? If so, you can offer any feedback by filling out and submitting the following form. </p>
         <form action="https://formspree.io/f/movpegny" method="POST">
         <fieldset>
         <legend>Feedback Form</legend>
           <label for="first_name">Your Name</label>
-          <input type="text" id="first_name" name="first_name" placeholder="Enter Your Name">
+          <input type="text" id="first_name" name="first_name">
 
           <label for="email">Your Email</label>
           <input type="email" id="email" name="email">
@@ -106,12 +104,12 @@
           <input type="date" id="date" name="date" required>
 
 
-          <label for="message">Leave Feedback*</label>
+          <label for="message">Write Your Feedback*</label>
 
           <textarea id="message" name="message" required></textarea>
 
-          <label for="submit">Submit</label>
-          <input type="submit" id="submit" name="submit" value="submit"></input>
+          <!-- <label for="Submit">Submit</label> -->
+          <input type="submit" id="submit" name="submit" value="Submit"></input>
       </div>
     </section>
 
@@ -120,20 +118,10 @@
     </main>
 <!-- Add Career center email and phone number to footer  -->
     <footer>
-        <p>University of Michigan School of Information @ Copyright <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p>University of Michigan School of Information @ Copyright <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a> | umsi.careers@umich.edu | 2260 Leinweber Building</p>
     </footer>
 </body>
 <script>
-  function myFunction() {
-  const menu = document.getElementById("navmenu");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
-
-
   document.getElementById('year').innerHTML = new Date().getFullYear();
   console.log("did year show up?")
 </script>

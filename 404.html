@@ -11,18 +11,47 @@
     <title>404 Error</title>
 </head>
 <body>
-    <main>
+    <header>
+      <div class="skip"><a href="#main">Skip to Main Content</a></div>
+      <div>
+        <!-- <img class = "logo" src = "images/UMSI_signature_vertical_informal_solidblue.jpg" alt = "UMSI Logo"> -->
+        <nav>
+          <div class = "navlogo">
+            <img class = "logo" src = "images/UMSI_signature_vertical_informal_solidblue.jpg" alt = "UMSI Logo">
+          </div>
+          <div>
+            <ul class = "navmenu">
+                <!-- <li><img class = "logo" src = "images/UMSI_signature_vertical_informal_solidblue.jpg" alt = "UMSI Logo"></li> -->
+                <li class = "nav1 active"><a href = "index.html">Home</a></li>
+                <li class = "nav2"><a href = "resume.html">Resumes</a></li>
+                <li class = "nav3"><a href = "network.html">Networking & Connections</a></li>
+                <li class = "nav4"><a href = "careerexplore.html">Career Exploration</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="error-main" id="main">
         <div class = "box error">
-            <h1>404 Error</h1>
-            <p>The page you requested could not be found</p>
+            <h1 class = "h1-error">404 Error</h1>
+            <p>The page you requested could not be found.</p><br>
+             <button onclick="history.back()">
+            Go Back to Previous Page
+            </button>
+            <p>or</p>
             <a href="index.html">Return to Home Page</a>
         </div>
     </main>
+        <footer class="footer-error">
+        <p>University of Michigan School of Information @ Copyright <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a> | umsi.careers@umich.edu | 2260 Leinweber Building</p>
+    </footer>
 </body>
 <script>
-//     alert("404 Error");
-//     let nm = prompt("What is your problem");
-//     document.querySelector('h1').innerHTML = nm;
-//     console.log("This is not working for some reason");
+    alert("404 Error");
+    // let nm = prompt("What is your problem");
+    // document.querySelector('h1').innerHTML = nm;
+    console.log("This page isn't available");
+    document.getElementById('year').innerHTML = new Date().getFullYear();
+  console.log("did year show up?")
 </script>
 </html>
